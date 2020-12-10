@@ -7,10 +7,6 @@
     alt="{{ personne?.name }}"
   />
 
-  {{ personne?.firstname }} {{ personne?.name | uppercase | slice: 2:6 }}
+  {{ personne?.firstname }} {{ personne?.name | uppercase }}
 </span>
-<!-- <p>
-  1 euro en dollar est égal à {{ 1 | moneyConvertor: 0 | currency: "USD" }} 1
-  dollar en euro est égal à {{ 1 | moneyConvertor: 1 | currency: "EUR" }}
-</p>
- -->
+

@@ -1,0 +1,10 @@
+<div id="listEmbauchesContainer">
+<h4> Liste des Employés embauchés</h4>
+<div id="listEmbauches" class="pt-2 pb-2 pl-2 pr-2" >
+  <span  id="Embauches" *ngFor="let personnesEmbauches of personnesEmbauches" class="mr-5">
+    <img class="rounded-circle" width="50px" height="50px"
+     src="assets/images/{{ personnesEmbauches?.path | defaultImage }}" />
+    {{ personnesEmbauches.firstname }}{{ personnesEmbauches.name }}
+   </span>
+</div>
+</div>

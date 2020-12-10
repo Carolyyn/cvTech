@@ -1,3 +1,4 @@
+import { EmbaucheService } from './../services/embauche.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Personne } from './../Model/personne';
@@ -9,7 +10,9 @@ import { Personne } from './../Model/personne';
 })
 export class CardComponent implements OnInit {
   @Input() personne: Personne = new Personne();
-  constructor(private router: Router) {}
+  listeEmbauches: Personne[] = [];
+  constructor(private router: Router,
+              private embaucherService: EmbaucheService) {}
 
   ngOnInit(): void {
     console.log('in card', this.personne);
@@ -17,5 +20,10 @@ export class CardComponent implements OnInit {
   // envoyer vers la page détails de la personne
   goToDetails() {
     this.router.navigate(['cv', this.personne.id]);
+  }
+
+  embaucherPersonne()
+  {
+    this.embaucherService.embaucher(this.personne);
   }
 }

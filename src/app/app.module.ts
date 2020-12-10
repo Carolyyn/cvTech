@@ -1,3 +1,4 @@
+import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -75,6 +76,7 @@ import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
     ObservableTestComponent,
     HttpTestComponent,
     AddPersonneComponent,
+    EmbaucheComponent
   ],
   imports: [
     BrowserModule,

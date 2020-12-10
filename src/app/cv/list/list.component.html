@@ -1,8 +1,6 @@
 <ol class="list-group">
+  <h4> CV Candidats</h4>
   <li *ngFor="let actualPersonne of personnes" class="list-group-item">
-    <app-item
-      (selectPersonne)="forwardPersonne($event)"
-      [personne]="actualPersonne"
-    ></app-item>
+    <app-item (selectPersonne)="forwardPersonne($event)" [personne]="actualPersonne"></app-item>
   </li>
 </ol>
